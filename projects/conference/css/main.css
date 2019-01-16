@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+.navbar-custom { 
+  background-color: #252628;
+  border-radius:0;
+  border-bottom: none;
+  margin: 0;
+}
+
+.navbar-custom a { 
+  color: #fff;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus  { 
+	color: #000;
+	background-color: #d6ba32;
+	transition: 0.4s all ease;
+}
+
+.navbar-custom button:hover {
+ background: #d6ba32;
+ color: #252628;
+ transition: 0.5s all linear;
+}
+
+.navbar-custom .navbar-toggle .icon-bar { 
+	background-color: #fff; 
+}
+.navbar-fixed-bottom {
+	background-color: #252628;
+	height: 40px;
+	text-align: center;
+	color: #fff;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.navbar-fixed-bottom a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar-fixed-bottom a:hover {
+	text-decoration: none;
+	color: #d6ba32;
+	transition: 0.5s all linear;
+}
+
+.carousel {
+	background: #333;    
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-inner img{
+  width: 82%;
+}
+
+.carousel-inner p {
+	font-size: 18px;
+	padding: 20px;
+	color: #FFFFFF;
+	animation: anim-P 1.6s ease-out;
+}
+@keyframes anim-H3 {
+ from {
+  opacity: 0;
+  transform: translateX(-2000px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+}
+@keyframes anim-P {
+ from {
+  opacity: 0;
+  transform: translateX(2000px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+}    
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.content .one {
+  margin-top: 50px;
+}
+
+.content .two {
+  margin-top: 200px;
+}
+
+.content .text-muted {
+  margin-top: 10px;
+}
+
+.tftable {
+  font-size:12px;
+  color:#fbfbfb;
+  border-width: 1px;
+  border-color: #686767;
+  border-collapse: collapse;
+  width: 60%;
+  margin-bottom: 50px;
+  min-width: 250px;
+}
+.tftable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
+.tftable tr {background-color:#2f2f2f;}
+.tftable td {font-size:12px;border-width: 1px;padding: 4px;border-style: solid;border-color: #686767;}
+.tftable .it:hover {background-color:#d6ba32; color:#000;}
+.tftable .it img {
+  width: 20px;
+}
+
+.tftable1 {
+  font-size:12px;
+  color:#fbfbfb;
+  border-width: 1px;
+  border-color: #686767;
+  border-collapse: collapse;
+  width: 90%;
+  min-width: 300px;
+}
+.tftable1 th {font-size:12px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
+.tftable1 tr {background-color:#2f2f2f;}
+.tftable1 td {font-size:12px;border-width: 1px;padding: 3px;border-style: solid;border-color: #686767;}
+.tftable1 .it:hover {background-color:#d6ba32; color:#000;}
+
+.content-main iframe {
+  padding-top: 15px;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  min-height: 300px;
+  height: 500px;
+  display: block;
+}
+
+.content button {
+  outline: 0;
+  background: #252628;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 15px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin: 15px 0px 0px 0px;
+  margin-bottom: 30px;
+}
+
+.content button:hover {
+  background: #d6ba32;
+  color: #252628;
+  transition: 0.5s all linear;
+}
+
+.content-kotofei h2 {
+  padding-bottom: 20px;
+}
+
+.content-kotofei p {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.content-kotofei img {
+  width: 30%;
+  margin-top: 15px;
+}
+
+@media all and (max-width: 900px) {
+  .carousel-inner p {
+   font-size: 16px;
+   padding: 10px;
+ }
+ .content-main iframe {
+  width: 80%;
+}
+.carousel-inner img{
+  width: 100%;
+}
+.tftable {
+  width: 80%;
+}
+.tftable td {
+  padding: 2px;
+}
+.tftable1 th {
+  padding: 4px;
+}
+.tftable1 td  {
+  padding: 2px;
+} 
+.content-kotofei img {
+  width: 50%;
+}
+}
+@media all and (max-width: 768px) {
+ .carousel-inner p {
+  display: none;
+}
+.content-main iframe {
+  width: 80%;
+}
+.content-main iframe {
+  height: 350px;
+}
+.tftable {
+  width: 80%;
+}
+.tftable td {
+  padding: 2px;
+}
+.content-kotofei img {
+  width: 50%;
+}
+.content button {
+  width: 25%
+}
+}

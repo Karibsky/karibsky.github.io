@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Загадки Челябинска</title>
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+	<!-- HEADER -->
+	<nav class="navbar navbar-custom" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Загадки Челябинска</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="main.html">Главная</a></li>
+					<li><a href="gallery.html">Галерея</a></li>
+					<li><a href="cabinet.html">Личный кабинет</a></li>
+				</ul> 
+			</div>
+		</div>
+	</nav>
+	<!-- HEADER -->
+
+	<!-- CONTENT -->
+
+	<div class="content">
+		<center>
+			<table class="tftable1" border="1">
+				<tr><th>Квест</th><th>Статус</th></tr>
+				<tr class="it"><td>«Память поколений»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Уральские сувениры»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Любовь бессмертна»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Весь мир - театр»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Без кота и жизнь не та!»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Индустриализация - Становление -Космос»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Ровесник Победы»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Инопланетные гости»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Стык времён»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Сокровища мира»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«На Север!»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«АСА»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Великому подвигу города-героя»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Белеет парус одинокий»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Вождь народов»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Уральская молния»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Романтика большого города»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Камень из Магнесии»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Я памятник себе воздвиг нерукотворный»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«А глаз как у орла»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Уральская тройка»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«И поёшь ты чуть тише, чем Монсерат Кабалье!»</td><td class="change">Не пройден</td></tr>
+				<tr class="it"><td>«Тайные знаки»</td><td class="change">Не пройден</td></tr>
+			</table>
+			<button class="exit" onclick="window.location.replace('index.html');">Выйти</button>
+		</center>
+	<!-- STARIE 
+	<h1 class="one">Текущее задание <br>
+		<small class="text-muted">задание</small>
+	</h1>
+	<h1 class="two">Прогресс <br>
+		<small class="text-muted">прогресс</small>
+	</h1>
+-->
+</div>
+<!-- CONTENT -->
+
+<!-- SIDEBAR -->
+<div class="navbar-fixed-bottom row-fluid">
+	<div class="navbar-inner">
+		<div class="container">
+			<p>Karibsky developer &copy 2018 <br><a href="https://karibsky.github.io/" target="_blank">www.karibsky.github.io</a></p>
+		</div>
+	</div>
+</div>
+<!-- SIDEBAR -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.tftable1 .it').click(function() {
+			$('.change',this).text("Пройден");
+		});
+	});
+</script>
+
+
+</body>
+</html>

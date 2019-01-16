@@ -1,0 +1,114 @@
+@import url('layout.css');
+
+.container-one {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+#one .card {
+	margin: 40px auto 0 auto;
+	height: 55%;
+	width: 35%;
+}
+
+#one .card-image {text-align: center;}
+#one .card-header {text-align: center; border-bottom: 2px solid black; padding-bottom: 15px; width: 70%;}
+#one .card-header .title {font-size: 50px;}
+#one .card-top {display: flex; flex-direction: column; align-items: center; padding: 0 20px;}
+#one .card-skills {margin:20px 0; display: flex; flex-direction: column; align-items: center;}
+#one .progress-container {text-align: center; width: 65%;}
+
+#one .progress-bar, .progress-bar-60, .progress-bar-80, .progress-bar-70 {
+	background: #333;
+	border-radius: 13px;
+	height: 20px;
+	padding: 3px;
+}
+
+#one .progress-bar:after {
+	content: '';
+	display: block;
+	background: orange;
+	width: 99%;
+	height: 100%;
+	border-radius: 9px;
+}
+
+#one .progress-bar-60:after  {
+	content: '';
+	display: block;
+	background: orange;
+	width: 60%;
+	height: 100%;
+	border-radius: 9px;
+}
+
+#one .progress-bar-80:after  {
+	content: '';
+	display: block;
+	background: orange;
+	width: 80%;
+	height: 100%;
+	border-radius: 9px;
+}
+
+#one .progress-bar-70:after  {
+	content: '';
+	display: block;
+	background: orange;
+	width: 70%;
+	height: 100%;
+	border-radius: 9px;
+}
+
+#one .progress-container:last-child {border-bottom: 2px solid black; padding-bottom: 45px;}
+#one .card-icons {text-align: center;margin-bottom: 10px;}
+#one .card-icons i {text-decoration: none; color: #000;}
+#one .card-icons i:hover {transform:rotate(360deg);transition:all .3s ease-in-out 0s; color: orange;}
+
+#two {margin:0 20px;}
+#two .about-me .title {text-align: center;}
+#three {height: 100vh;}
+#three .name {text-align: center; padding-top: 40px;}
+#three h1 {padding-top: 40px;}
+#three .projects {display: flex; padding: 0 15px;}
+#three .card{
+	width: 20%;
+	min-width: 280px;
+	margin: 0 auto;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+#three .card-image img {width: 100%; height: 36vh;}
+#three .card-content{
+	position: relative;
+	padding: 5%;
+	padding-top: 15%;
+	margin-top: -10%;
+	padding-bottom: 8%;
+	overflow: hidden;
+}
+#three .card-title a {
+	font-size: 25px;
+	text-decoration: none;
+	color:#000;
+}
+#three .card-title a:hover {
+	color:orange; 
+}
+#three .card-desc {
+	font-size: 15px;
+}
+@media screen and (max-width: 1400px) {#three .projects{flex-direction: column;} 
+@media screen and (max-width: 768px) {
+	#one .card-header {width: auto;}
+	#three .card-image img{height: 40vh;}
+	#one .progress-container {width: 200%;}
+	.header-right a {margin:0 5px;}
+	.header-right a:last-child{margin: 0 5px;}
+	header{padding: 0 15px;}
+}
