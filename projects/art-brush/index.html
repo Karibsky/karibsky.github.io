@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>ART-BRUSH</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="SHORTCUT ICON" href="img/logo.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<!-- Последняя компиляция и сжатый CSS -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Дополнение к теме -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Навигация</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo2.svg" alt="Dispute Bills"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Главная<span class="sr-only">(current)</span></a></li>
+					<li><a href="painter.html">Художники</a></li>
+					<li><a href="gallery.html">Галерея</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="register.html">Регистрация</a></li>
+					<li><a href="login.html">Вход</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>﻿
+	<!-- Последняя компиляция и сжатый JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- header -->
+		<div class="header">
+		    <div class="header_title"><p>Наполни жизнь искусством</p></div>
+		    <div id="header_arrow">
+		        <a href="#content"><img src="img/arrow.png" alt="arrow"></a>
+		    </div>
+		</div>
+	<!-- контент -->
+	<div class="content-text">
+		<div id="content">
+			<div class="title-content">
+				<p>О нас</p>
+			</div>
+			<div class="body-content">
+				<p>Зайдя на наш сайт, вы сделали правильный выбор! У нас вы сможете увидеть знаменитых художников, узнать их биографию, а так же посмотреть написанные ими работы. Для того, чтобы начать погружаться в искусство необходимо лишь выбрать нужную вкладку в меню сайта. Удачи!</p>
+			</div>
+		</div>
+	</div>
+	<!-- Отзывы-->
+	<div class="reviews-all">
+		<div class="reviews">
+				<div class="reviews-title"><p>Отзывы</p></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="reviews-img-responsive"><img src="img/reviews.png" alt="user1"></div>
+							<p>Дизайн и удобность этого сайта просто впечатляет! Респект!</p>
+						</div>
+						<div class="col-md-4">
+							<div class="reviews-img-responsive"><img src="img/reviews2.png" alt="user1"></div>
+							<p>Долго искала нормальную картинную галерею, и наконец нашла, то, что надо!!!))</p>
+						</div>
+						<div class="col-md-4">
+							<div class="reviews-img-responsive"><img src="img/reviews3.png" alt="user1"></div>
+							<p>Лучшая интернет-галерея))</p>
+						</div>
+					</div>
+				</div>
+	    </div>
+    </div>
+	<!-- Подвал -->
+	<div class="footer">
+		<div class="container">
+	        <div class="row">
+	            <div class="col-md-6">
+					<p>© Интернет-галерея «ART-BRUSH»<br>
+	                    art-brush@mail.ru</p>
+				</div>
+				<div class="col-md-6">
+					<div class="link">
+						<p>&copy; 2017-2018 Все права защищены, "ART-BRUSH"</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	    </div>
+	<script>
+		 $(document).ready(function(){
+		    $("#header_arrow").on("click","a", function (event) {
+		        event.preventDefault();
+		        var id  = $(this).attr('href'),
+		            top = $(id).offset().top;
+		        $('body,html').animate({scrollTop: top}, 1500);
+		    });
+		});
+	</script>
+</body>
+</html>
