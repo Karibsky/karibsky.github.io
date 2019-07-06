@@ -124,7 +124,7 @@
 .menu .right-menu a:hover {
 	cursor: pointer;
 	-webkit-transition: all 0.35s ease;
-transition: all 0.35s ease;
+	transition: all 0.35s ease;
 }
 
 .menu .right-menu a:last-child {
@@ -141,18 +141,19 @@ transition: all 0.35s ease;
 /* card start */
 .card {
 	position: absolute;
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	color:#fff;
+	text-align: center;
 	transform: translate(-50%, -50%);
 }
 
 .card .card-info p {
-	font-size: 60px;
+	font-size: 70px;
 }
 
 .card .card-info span {
-	font-size:20px;
+	font-size:25px;
 }
 
 .card .card-icons {
@@ -183,77 +184,77 @@ transition: all 0.35s ease;
 	padding:30px;
 }
 figure.project {
-color: #fff;
-background-color: #1a1a1a;
-color: #ffffff;
-text-align: left;
-margin-bottom: 50px;
-width: 100%;
-border-radius: 0px;
+	color: #fff;
+	background-color: #1a1a1a;
+	color: #ffffff;
+	text-align: left;
+	margin-bottom: 50px;
+	width: 100%;
+	border-radius: 0px;
 }
 figure.project * {
--webkit-box-sizing: border-box;
-box-sizing: border-box;
--webkit-transition: all 0.35s ease;
-transition: all 0.35s ease;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
 }
 figure.project img {
-max-width: 100%;
--webkit-transform: scale(1.1);
-transform: scale(1.1);
-vertical-align: top;
-opacity: 0.7;
+	max-width: 100%;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	vertical-align: top;
+	opacity: 0.7;
 }
 figure.project figcaption {
-position: absolute;
-padding: 40px 25px;
-top: 0;
-left: 0;
+	position: absolute;
+	padding: 40px 25px;
+	top: 0;
+	left: 0;
 }
 figure.project h2,
 figure.project p {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
 figure.project h2 {
-margin-bottom: 10px;
-display: inline-block;
-font-weight: 100;
-font-size: 1.8em;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-weight: 100;
+	font-size: 1.8em;
 }
 figure.project p {
-font-weight: 300;
-margin-bottom: 20px;
-line-height: 1.4em;
+	font-weight: 300;
+	margin-bottom: 20px;
+	line-height: 1.4em;
 }
 figure.project a {
-display: inline-block;
-padding: 10px 20px;
-border: 1px solid #ffffff;
-text-decoration: none;
-color: #ffffff;
-letter-spacing: 2px;
-text-transform: uppercase;
-font-size: 0.8em;
--webkit-transform: translateY(50%);
-transform: translateY(50%);
-opacity: 0;
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid #ffffff;
+	text-decoration: none;
+	color: #ffffff;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%);
+	opacity: 0;
 }
 figure.project a:hover {
-background-color: #f1f4d8;
-color:#1a1a1a;
+	background-color: #f1f4d8;
+	color:#1a1a1a;
 }
 figure.project:hover img,
 figure.project.hover img {
-opacity: 0;
--webkit-transform: scale(1);
-transform: scale(1);
+	opacity: 0;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 figure.project:hover a,
 figure.project.hover a {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
 }
 /* projects end */
 
@@ -262,7 +263,7 @@ opacity: 1;
 	text-align: center;
 	margin-bottom: 30px;
 }
-	
+
 #four h1 {
 	font-size:40px;
 }
@@ -312,10 +313,10 @@ opacity: 1;
 		font-size:18px;
 	}
 	.card .card-info p {
-		font-size: 50px;
+		font-size: 60px;
 	}
 	.card .card-info span {
-		font-size:15px;
+		font-size:20px;
 	}
 	#two h1 {
 		font-size:35px;
@@ -325,6 +326,9 @@ opacity: 1;
 	}
 	#four h1 {
 		font-size:35px;
+	}
+	#two img {
+		margin-top: 20px;
 	}
 }
 @media screen and (max-width:320px) {
@@ -344,7 +348,7 @@ opacity: 1;
 		font-size: 50px;
 	}
 	.card .card-info span {
-		font-size:15px;
+		font-size:20px;
 	}
 	#two h1 {
 		font-size:35px;
@@ -359,4 +363,22 @@ opacity: 1;
 		margin:0px 10px;
 		padding:10px;
 	}
+	#two img {
+		margin-top: 20px;
+	}
+}
+.chipstag {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 12px 0 12px;
+	margin: 15px 8px 0 8px;
+	font-size: 16px;
+	border-radius: 16px;
+	background: #f1f4d8;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
 }

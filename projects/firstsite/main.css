@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+* {padding:0px;margin:0px;}
+.wrapper {min-width:721px;min-height:600px; overflow:hidden;}
+#header {padding:10px; margin:10px; }
+.headertext {color:red; font-size:22px;}
+#header p {float:right; font-size:22px;} 
+#header2 {padding:10px; margin:10px;}
+#header2 a {text-decoration:none;color:#000;}
+#header2 ul li {list-style:none; text-decoration:none; padding:10px; margin:10px; display:inline; color:#000; font-size:16px;}
+#header2 ul li:hover {background:#FFA500;transition:0.5s; -webkit-transition:0.5s; -moz-transition:0.5s; -o-transition:0.5s;  -ms-transition:0.5s; }
+#header2 img {display:none;}
+#content {padding:10px; margin:10px;} 
+#content ul {list-style:none; text-decoration:none;}
+#content ul li {display:inline-block; padding:10px; margin:10px;}
+#contenttext {padding:10px; margin:10px; text-decoration:none;}
+#contenttext a {text-decoration:none;}
+#contenttext p {font-size:20px; color:#000; text-decoration:none; text-align:justify;} 
+#contenttext h1 {font-size:22px; color:#000; text-decoration:none; padding:5px;} 
+#content a {text-decoration:none; color:#000;}
+#content img {max-width:100%;max-height:100%;}
+#content2 img {min-width:95%;min-height:95%;margin:0; padding:0;}
+#footer {padding:10px; margin:10px; color:#000;}
+#footer a {text-decoration:none; list-style:none;}
+#footer h1 {color:#000; font-size:16px;}
+#footer ul {list-style:none; padding:10px; margin:10px;}
+#footer ul li {color:#000; padding:3px; display:inline-block;}
+#footer img {width:50px;height:50px;}
+#footer ul li a {color:#000;}
+#footer p {color:#000; margin:4px;}
+img {max-width:100%;max-height:100%;padding:5px; margin:5px;}
+@media screen and (min-width:240px) and (max-width:720px) {
+	.wrapper {min-width:240px; max-width:720px;}
+	#content2 img {max-width:90%;max-height:90%;}
+	#content a {float:left;}
+	#header2 img {display:block; max-width:30%; max-height:30%; margin:3px; padding:0;}
+	#content ul li {height:auto; max-width:10px; min-width:70px; margin:3px; padding:5px; display:table;}
+	#content h1 {font-size:14px;}
+	#content p {font-size:12px; color:#000; text-decoration:none;} 
+	#header2 li {min-width:300%;}
+	#header2 a {display:block;}
+	#header2 ul li {display:table; margin-left:4px; padding:5px;}
+	#header2 ul li:hover {background:#FFA500; background-size:cover;}
+}
