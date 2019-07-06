@@ -35,15 +35,11 @@
 }
 .navbar-fixed-bottom {
 	background-color: #252628;
-	height: 40px;
+	height: 60px;
+  font-size: 16px;
+  line-height: 60px;
 	text-align: center;
 	color: #fff;
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  align-content: stretch;
 }
 
 .navbar-fixed-bottom a {
@@ -59,9 +55,18 @@
 
 .carousel {
 	background: #333;    
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
 }
 
 .carousel-inner img{
@@ -113,44 +118,56 @@ to {
 }
 
 .tftable {
-  font-size:12px;
   color:#fbfbfb;
   border-width: 1px;
   border-color: #686767;
   border-collapse: collapse;
-  width: 60%;
-  margin-bottom: 50px;
+  width: 90%;
+  margin-bottom: 25px;
   min-width: 250px;
 }
-.tftable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
+.tftable th {font-size:14px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
 .tftable tr {background-color:#2f2f2f;}
-.tftable td {font-size:12px;border-width: 1px;padding: 4px;border-style: solid;border-color: #686767;}
+.tftable td {font-size:14px;border-width: 1px;padding: 4px;border-style: solid;border-color: #686767;}
 .tftable .it:hover {background-color:#d6ba32; color:#000;}
 .tftable .it img {
   width: 20px;
 }
 
 .tftable1 {
-  font-size:12px;
   color:#fbfbfb;
   border-width: 1px;
   border-color: #686767;
   border-collapse: collapse;
-  width: 90%;
+  width: 100%;
   min-width: 300px;
 }
-.tftable1 th {font-size:12px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
+.tftable1 th {font-size:14px;background-color:#171515;border-width: 1px;padding: 6px;border-style: solid;border-color: #686767;text-align:left;}
 .tftable1 tr {background-color:#2f2f2f;}
-.tftable1 td {font-size:12px;border-width: 1px;padding: 3px;border-style: solid;border-color: #686767;}
+.tftable1 td {font-size:14px;border-width: 1px;padding: 3px;border-style: solid;border-color: #686767;}
 .tftable1 .it:hover {background-color:#d6ba32; color:#000;}
+
+.content-main {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
 
 .content-main iframe {
   padding-top: 15px;
   text-align: center;
   margin: 0 auto;
-  width: 60%;
-  min-height: 300px;
-  height: 500px;
+  width: 90%;
+  height:70vh;
   display: block;
 }
 
@@ -195,13 +212,13 @@ to {
    padding: 10px;
  }
  .content-main iframe {
-  width: 80%;
+  width: 90%;
 }
 .carousel-inner img{
   width: 100%;
 }
 .tftable {
-  width: 80%;
+  width: 90%;
 }
 .tftable td {
   padding: 2px;
@@ -221,13 +238,13 @@ to {
   display: none;
 }
 .content-main iframe {
-  width: 80%;
+  width: 90%;
 }
 .content-main iframe {
   height: 350px;
 }
 .tftable {
-  width: 80%;
+  width: 90%;
 }
 .tftable td {
   padding: 2px;
@@ -237,5 +254,8 @@ to {
 }
 .content button {
   width: 25%
+}
+.tftable {
+  margin-bottom: 70px;
 }
 }
