@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif; }
+
+main {
+  height: 100vh;
+  padding: 20px 20px 0 20px; }
+  main .title {
+    display: flex;
+    margin: 10px; }
+    main .title a {
+      background: #45bbcc; }
+      main .title a:hover {
+        background: #3ea8b7; }
+    main .title .title__left {
+      flex: 1; }
+
+@media (max-width: 850px) {
+  .content__left h6 {
+    display: none; } }
+
+@media (max-width: 600px) {
+  .content__left h6 {
+    display: block; }
+  .title__right i {
+    display: none; } }
+
+.card-image .background-image {
+  height: 25vh; }
+
+.card-image .card-title {
+  font-size: 1.3rem; }
+  .card-image .card-title small {
+    font-size: 1rem; }
+  .card-image .card-title img {
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    margin-bottom: 20px; }
+
+.card-action a {
+  background: #45bbcc;
+  margin: 15px 0; }
+  .card-action a:hover {
+    background: #3ea8b7; }
+
+@media screen and (max-width: 900px) {
+  .card-title img {
+    visibility: hidden; }
+  .card-action a {
+    margin: 5px 0; } }

@@ -1,0 +1,13 @@
+@import "template";
+
+tbody {
+	.waves-effect {
+		background: $aqua;
+		&:hover {
+			background: $aqua-hover;
+		}
+		i {
+			margin-right: 0px;
+		}
+	}
+}

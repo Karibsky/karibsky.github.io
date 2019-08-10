@@ -1,0 +1,42 @@
+[
+	{
+		"firstname":       "Helen",   
+		"lastname":      "Levine",   
+		"email":    "lena@example.com" ,
+		"phone": "+1-202-555-0167",
+		"role": "Пользователь",
+		"created_at": "2019-05-31"
+	},
+	{
+		"firstname":       "Anna",   
+		"lastname":      "Pennington",   
+		"email":    "apennington@example.com" ,
+		"phone": "+1-202-555-0151",
+		"role": "Пользователь",
+		"created_at": "2019-04-29"
+	},
+	{
+		"firstname":       "Ethel",   
+		"lastname":      "Mckinney",   
+		"email":    "mckinney@example.com" ,
+		"phone": "+1-202-555-0158",
+		"role": "Пользователь",
+		"created_at": "2019-05-24"
+	},
+	{
+		"firstname":       "Elizabeth",   
+		"lastname":      "Walker",   
+		"email":    "ewalker@example.com" ,
+		"phone": "+1-202-555-0156",
+		"role": "Пользователь",
+		"created_at": "2019-05-28"
+	},
+	{
+		"firstname":       "Karibsky",   
+		"lastname":      "Developer",   
+		"email":    "example@example.com" ,
+		"phone": "+1-202-555-0150",
+		"role": "Администратор", 
+		"created_at": "2019-04-02"
+	}
+]

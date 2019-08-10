@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin dashboard - users</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/users.css">
+</head>
+<body>
+	<div class="sidebar">
+		<ul class="sidenav" id="slide-out">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="img/headerbg.png">
+					</div>
+					<a><img class="circle" src="img/patrick.jpg"></a>
+					<a><span class="white-text name">Karibsky Developer</span></a>
+					<a><span class="white-text email">example@example.com</span></a>
+				</div>
+			</li>
+			<li><a href="index.html" class="waves-effect"><i class="material-icons">home</i>Главная</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Пользователи</a></li>
+			<li><a href="users.html" class="waves-effect"><i class="material-icons">directions_walk</i>Управление</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Аккаунт</a></li>
+			<li><a href="profile.html" class="waves-effect"><i class="material-icons">settings</i>Настройки</a></li>
+			<li><a href="/" class="waves-effect"><i class="material-icons">close</i>Выйти</a></li>
+		</ul>
+	</div>
+	<main>
+		<div class="title">
+			<div class="title__left">
+				<a class="btn-floating pulse open-sidebar"><i class="material-icons">menu</i></a>
+			</div>
+			<div class="title__right">
+				<a class="waves-effect waves-light btn"><i class="material-icons left">how_to_reg</i>Отчет</a>
+			</div>
+		</div>
+		<div class="users">
+			<table class="striped highlight responsive-table">
+				<thead>
+					<tr>
+						<th>Фамилия</th>
+						<th>Имя</th>
+						<th>Email</th>
+						<th>Телефон</th>
+						<th>Роль</th>
+						<th>Дата регистрации</th>
+					</tr>
+				</thead>
+				<tbody id="table-content"></tbody>
+			</table>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js/sidenav.js"></script>
+	<script>
+		$.getJSON("users.json", function(data) {
+			var renderedData = "";
+			$.each(data, function(key,value) {
+				renderedData += 
+				`<tr>
+						<td>${value.lastname}</td>
+						<td>${value.firstname}</td>
+						<td>${value.email}</td>
+						<td>${value.phone}</td>
+						<td>${value.role}</td>
+						<td>${value.created_at}</td>
+						<td><a class="waves-effect waves-light btn"><i class="material-icons left">edit</i></a></td>
+						<td><a class="waves-effect waves-light btn"><i class="material-icons left">delete</i></a></td>
+					</tr>`;
+			}); 
+			$('#table-content').html(renderedData);
+		});
+	</script>
+</body>

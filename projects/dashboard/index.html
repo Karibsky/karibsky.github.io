@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin dashboard</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="sidebar">
+		<ul class="sidenav" id="slide-out">
+			<li>
+				<div class="user-view">
+					<div class="background">
+						<img src="img/headerbg.png">
+					</div>
+					<a><img class="circle" src="img/patrick.jpg"></a>
+					<a><span class="white-text name">Karibsky Developer</span></a>
+					<a><span class="white-text email">example@example.com</span></a>
+				</div>
+			</li>
+			<li><a href="index.html" class="waves-effect"><i class="material-icons">home</i>Главная</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Пользователи</a></li>
+			<li><a href="users.html" class="waves-effect"><i class="material-icons">directions_walk</i>Управление</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Аккаунт</a></li>
+			<li><a href="profile.html" class="waves-effect"><i class="material-icons">settings</i>Настройки</a></li>
+			<li><a href="/" class="waves-effect"><i class="material-icons">close</i>Выйти</a></li>
+		</ul>
+	</div>
+	<main>
+		<div class="title">
+			<div class="title__left">
+				<a class="btn-floating pulse open-sidebar"><i class="material-icons">menu</i></a>
+			</div>
+			<div class="title__right">
+				<a class="waves-effect waves-light btn"><i class="material-icons left">how_to_reg</i>Отчет</a>
+			</div>
+		</div>
+		<div class="cards">
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="card blue_line">
+						<div class="card-stacked">
+							<div class="card-content">
+								<div class="content__left">
+									<h6>Посетители</h6>
+									<h5>121.9K</h5>
+								</div>
+								<div class="content__right">
+									<i class="material-icons left">people</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card green_line">
+						<div class="card-stacked">
+							<div class="card-content">
+								<div class="content__left">
+									<h6>Заказы</h6>
+									<h5>58.2K</h5>
+								</div>
+								<div class="content__right">
+									<i class="material-icons left">shopping_cart</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card yellow_line">
+						<div class="card-stacked">
+							<div class="card-content">
+								<div class="content__left">
+									<h6>Комментарии</h6>
+									<h5>30.7K</h5>
+								</div>
+								<div class="content__right">
+									<i class="material-icons left">comment</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="charts">
+			<div class="row">
+				<div class="col s12 m8">
+					<div class="card">
+						<div class="card-stacked">
+							<div class="card-content">
+								<p class="card-title">Пользователи</p>
+							</div>
+							<canvas id="visitsChart" class="chart"></canvas>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card">
+						<div class="card-stacked">
+							<div class="card-content">
+								<span class="card-title">Источники</span>
+							</div>
+							<canvas id="devicesChart" class="chart"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<script src="js/charts.js"></script>
+	<script src="js/sidenav.js"></script>
+</body>
+</html>

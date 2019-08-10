@@ -1,0 +1,52 @@
+@import "template";
+
+.card {
+	border-radius: 15px;
+	.card-content {
+		display: flex;
+		align-items: center;
+		.content__left {
+			flex:1;
+		}
+		i {
+			font-size:3rem;
+			margin-right: 0px;
+			color: $grey;
+		}
+	}
+	&.blue_line {
+		border-left:10px solid $blue;
+		h6 {
+			color: $blue;
+		}
+	}
+	&.green_line {
+		border-left:10px solid $green;
+		h6 {
+			color: $green;
+		}
+	}
+	&.aqua_line {
+		border-left:10px solid $aqua;
+		h6 {
+			color: $aqua;
+		}
+	}
+	&.yellow_line {
+		border-left:10px solid $yellow;
+		h6 {
+			color: $yellow;
+		}
+	}
+}
+.charts {
+	.card {
+		.card-title {
+			color:$blue;
+			padding:0;
+		}
+		.chart {
+			padding:0 24px 24px 24px;
+		}
+	}	
+}

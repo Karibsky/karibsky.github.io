@@ -1,0 +1,42 @@
+@import "template";
+
+.card-image {
+	.background-image {
+		height: 25vh;
+	}
+	.card-title {
+		font-size: 1.3rem;
+		small {
+			font-size: 1rem;
+		}
+		img {
+			border-radius: 50%;
+			height: 10vh;
+			width: 10vh;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.card-action {
+	a {
+		background: $aqua;
+		margin: 15px 0;
+		&:hover {
+			background: $aqua-hover;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.card-title {
+		img {
+			visibility: hidden;
+		}
+	}
+	.card-action {
+		a {
+			margin: 5px 0;
+		}
+	}
+}
