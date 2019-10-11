@@ -1,3 +1,9 @@
+AOS.init();
+
+$('.arrow').click(function() {
+    $('html, body').animate({scrollTop:$('#two').position().top}, 2000);
+});
+
 $('.right-menu #projects').click(function(){
     $('html, body').animate({scrollTop:$('#three').position().top}, 2000);
 });
@@ -32,9 +38,9 @@ function(data) {
 function showProjects(data) {
     var out = '';
     for (var i = 0; i < data.length; i++) {
-        out += `<div class="col-md-6">`;
-        out += `<figure class="col-md-4 project">`;
-        out += `<img src="${data[i]['gsx$image']['$t']}" alt="sq-sample33"/>`;
+        out += `<div class="col-md-6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="100">`;
+        out += `<figure class="col-md-2 project">`;
+        out += `<img src="${data[i]['gsx$image']['$t']}" alt="project-image"/>`;
         out += `<figcaption>`;
         out += `<h2>${data[i]['gsx$name']['$t']}</h2>`;
         out += `<p>${data[i]['gsx$description']['$t']}</p>`;
