@@ -22,8 +22,8 @@
 				<span>Karibsky</span>
 			</div>
 			<div class="right-menu">
-				<a id="projects">Проекты</a>
-				<a id="contacts">Заказать</a>
+				<a id="projects" onclick="$('html, body').animate({scrollTop:$('#three').position().top}, 2000)">Проекты</a>
+				<a id="contacts" onclick="$('html, body').animate({scrollTop:$('#four').position().top}, 3000);">Заказать</a>
 			</div>
 		</div>
 		<div class="card">
@@ -32,15 +32,15 @@
 				<span>Full-stack веб-разработчик<span class="blinking-cursor">|</span></span>
 			</div>
 		</div>
-		<div class="arrow"></div>
+		<div class="arrow" onclick="$('html, body').animate({scrollTop:$('#two').position().top}, 2000)"></div>
 	</section>
 	<section id="two">
 		<h1>Используемые технологии</h1>
 		<div class="skills container">
 			<div class="row">
 				<div class="col-md-2" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300">
-					<img src="img/react.png" alt="react">
-					<div class="chipstag">React</div>
+					<img src="img/javascript.png" alt="javascript">
+					<div class="chipstag">Javascript</div>
 				</div>
 				<div class="col-md-2" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
 					<img src="img/sass.png" alt="sass">
@@ -74,14 +74,14 @@
 	</section>
 	<section id="four">
 		<h1>Контакты</h1>
-		<i class="fa fa-vk fa-3x" aria-hidden="true"></i>
-		<i class="fa fa-github-alt fa-3x" aria-hidden="true"></i>
-		<i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+		<i class="fa fa-vk fa-3x" aria-hidden="true" onclick="window.open('https://vk.com/id252263204')"></i>
+		<i class="fa fa-github-alt fa-3x" aria-hidden="true" onclick="window.open('https://github.com/Karibsky')"></i>
+		<i class="fa fa-envelope fa-3x" aria-hidden="true" onclick="window.open('mailto:defendmax@gmail.com')"></i>
 		<br>
 	</section>
-	<p id="end"></p>
+	<p id="copyright"></p>
 	<script src="js/jquery.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.js" async></script>
 </body>
 </html>
