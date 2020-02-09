@@ -85,11 +85,13 @@ html::-webkit-scrollbar-thumb {
 
 .card .card-info p {
 	font-size: 60px;
+	margin: 5px 0;
 }
 
 .card .card-info span {
 	font-size:25px;
 	color:#f1f4d8;
+	word-wrap:break-word;
 }
 /* card end */
 
@@ -104,7 +106,7 @@ html::-webkit-scrollbar-thumb {
 	-o-animation: 1s blink step-end infinite;
 	animation: 1s blink step-end infinite;
 }
-@keyframes "blink" {
+@keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -120,7 +122,7 @@ html::-webkit-scrollbar-thumb {
 		color: white;
 	}
 }
-@-webkit-keyframes "blink" {
+@-webkit-keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -128,7 +130,7 @@ html::-webkit-scrollbar-thumb {
 		color: white;
 	}
 }
-@-ms-keyframes "blink" {
+@-ms-keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -136,7 +138,7 @@ html::-webkit-scrollbar-thumb {
 		color: white;
 	}
 }
-@-o-keyframes "blink" {
+@-o-keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -198,7 +200,7 @@ html::-webkit-scrollbar-thumb {
 	font-size:40px;
 }
 #two img {
-	max-width: 100%;\
+	max-width: 100%;
 	height: auto;
 }
 /* technologies end */
@@ -335,6 +337,17 @@ figure.project.hover a {
 }
 /* contacts end */
 
+.avatar {
+	background-image: url('../img/avatar.jpg');
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	background-position: top center;
+	border-radius: 50%;
+	border: 3px solid #f1f4d8;
+	margin: 0 auto;
+}
+
 @media screen and (max-width:768px) {
 	.menu .right-menu {
 		margin:0 5px;
@@ -346,10 +359,10 @@ figure.project.hover a {
 		font-size:18px;
 	}
 	.card .card-info p {
-		font-size: 55px;
+		font-size: 25px;
 	}
 	.card .card-info span {
-		font-size:25px;
+		font-size:15px;
 	}
 	#two h1 {
 		font-size:35px;
@@ -373,7 +386,12 @@ figure.project.hover a {
 	.chipstag:last-child {
 		margin-bottom: 8px;
 	}
+	.avatar {
+		width: 120px;
+		height: 120px;
+	}
 }
+
 @media screen and (max-width:320px) {
 	.menu .right-menu {
 		margin:0 5px;
@@ -386,12 +404,6 @@ figure.project.hover a {
 	}
 	.menu .logo span {
 		display: none;
-	}
-	.card .card-info p {
-		font-size: 45px;
-	}
-	.card .card-info span {
-		font-size:20px;
 	}
 	#two h1 {
 		font-size:35px;
@@ -420,6 +432,3 @@ figure.project.hover a {
 		margin-bottom: 8px;
 	}
 }
-
-
-
