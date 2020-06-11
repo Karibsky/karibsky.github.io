@@ -99,7 +99,6 @@ html::-webkit-scrollbar-thumb {
 .blinking-cursor {
 	margin-left: 1px;
 	font-size: 16px;
-	color: white !important;
 	-webkit-animation: 1s blink step-end infinite;
 	-moz-animation: 1s blink step-end infinite;
 	-ms-animation: 1s blink step-end infinite;
