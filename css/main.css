@@ -191,9 +191,8 @@ html::-webkit-scrollbar-thumb {
 /* technologies start */
 #two {
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 	overflow-x: hidden;
-	padding-bottom: 10px;
 }
 #two h1 {
 	font-size:40px;
@@ -201,21 +200,9 @@ html::-webkit-scrollbar-thumb {
 #two img {
 	max-width: 100%;
 	height: auto;
+	border-radius: 5px;
 }
 /* technologies end */
-
-/* techologies label start */
-.chipstag {
-	height: 30px;
-	line-height: 30px;
-	padding: 0 12px 0 12px;
-	margin: 15px 8px 0 8px;
-	font-size: 16px;
-	border-radius: 16px;
-	background: #f1f4d8;
-	box-shadow: 0 5px 5px rgba(0,0,0,0.19), 0 1px 2px rgba(0,0,0,0.23);
-}
-/* techologies label end */
 
 /* projects start */
 #three {background-color: #17202c;color:#fff; height:auto;}
@@ -302,14 +289,12 @@ figure.project.hover a {
 /* contacts start */
 #four {
 	text-align: center;
-	margin-bottom: 30px;
-}
-#four h1 {
-	font-size:40px;
+	margin-top: 20px;
 }
 #four i {
-	margin:0px 15px;
+	margin:0px 10px;
 	padding:10px;
+	border-radius: 5px;
 }
 #four a {
 	padding:10px 0;
@@ -327,9 +312,8 @@ figure.project.hover a {
 	background:#ca3737;
 }
 #copyright {
-	text-align: center;
 	font-size:18px;
-	margin-bottom: 30px;
+	margin: 15px 0;
 }
 .fa-vk, .fa-github-alt, .fa-envelope:hover {
 	cursor:pointer;
@@ -338,8 +322,8 @@ figure.project.hover a {
 
 .avatar {
 	background-image: url('../img/avatar.jpg');
-	width: 200px;
-	height: 200px;
+	width: 170px;
+	height: 170px;
 	background-size: cover;
 	background-position: top center;
 	border-radius: 50%;
@@ -378,13 +362,6 @@ figure.project.hover a {
 	#two .skills {
 		overflow-x: hidden;
 	}
-	.chipstag {
-		width: 50%;
-		margin:0 auto;
-	}
-	.chipstag:last-child {
-		margin-bottom: 8px;
-	}
 	.avatar {
 		width: 120px;
 		height: 120px;
@@ -422,12 +399,5 @@ figure.project.hover a {
 	}
 	#two .skills {
 		overflow-x: hidden;
-	}
-	.chipstag {
-		width: 50%;
-		margin:0 auto;
-	}
-	.chipstag:last-child {
-		margin-bottom: 8px;
 	}
 }
