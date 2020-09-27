@@ -18,39 +18,36 @@ $(function() {
     })();
 
     (async () => {
-        let response = await fetch('https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json', {
-            method: 'GET',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin" : "*", 
-                "Access-Control-Allow-Credentials" : true 
+        $.ajax({
+            url: 'https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json',
+            dataType: 'json',
+            async: true,
+            success: function (data) {
+                fillProjectsFromResult(data);
+            },
+            error: function (e) {
+                throw new Error(e);
             }
         });
-        console.log(response);
-        // $.ajax({
-        //     url: 'https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json',
-        //     dataType: 'json',
-        //     async: true,
-        //     success: function (data) {
-        //         var data = data['feed']['entry'];
-        //         var out = '';
-        //         if (data.length > 0) {
-        //             $.each(data, function (key, value) {
-        //                 out += `<div class="col-md-4" data-aos="flip-${key % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${key * 100}">`;
-        //                 out += `<figure class="col-md-3 project">`;
-        //                 out += `<img src="${value['gsx$image']['$t']}" alt="${value['gsx$name']['$t']} project image"/>`;
-        //                 out += `<figcaption>`;
-        //                 out += `<h2>${value['gsx$name']['$t']}</h2>`;
-        //                 out += `<p>${value['gsx$description']['$t']}</p>`;
-        //                 out += `<a href="${value['gsx$url']['$t']}">Перейти</a>`;
-        //                 out += `</figcaption>`;
-        //                 out += `</figure>`;
-        //                 out += `</div>`;
-        //             });
-        //             $('.services .row').html(out);
-        //         }
-        //     }
-        // });
     })();
+
+    function fillProjectsFromResult(data) {
+        var data = data['feed']['entry'];
+        var out = '';
+        if (data.length > 0) {
+            data.forEach(function(item, i){
+                out += `<div class="col-md-4" data-aos="flip-${i % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${i * 100}">`;
+                out += `<figure class="col-md-3 project">`;
+                out += `<img src="${item['gsx$image']['$t']}" alt="${item['gsx$name']['$t']} project image"/>`;
+                out += `<figcaption>`;
+                out += `<h2>${item['gsx$name']['$t']}</h2>`;
+                out += `<p>${item['gsx$description']['$t']}</p>`;
+                out += `<a href="${item['gsx$url']['$t']}">Перейти</a>`;
+                out += `</figcaption>`;
+                out += `</figure>`;
+                out += `</div>`;
+            });
+            $('.services .row').html(out);
+        }
+    };
 });
