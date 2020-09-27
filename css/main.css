@@ -331,6 +331,65 @@ figure.project.hover a {
 	margin: 0 auto;
 }
 
+#arrow_up {
+	position:fixed;
+	z-index: 1;
+	display:none;
+	bottom:70px;
+	right:-5px;
+	cursor:pointer;
+}
+
+#arrow_up i {
+	width: 50px;
+	height: 50px;
+	display:block;
+	color: #000;
+	background: #f1f4d8;
+	opacity: .5;
+	text-align:center;
+	font-size:18px;
+	line-height: 50px;
+	border-radius: 5px;
+	-webkit-transition:  .3s all;
+		 -moz-transition:  .3s all;
+			-ms-transition:  .3s all;
+			 -o-transition:  .3s all;
+					transition:  .3s all;
+}
+
+#arrow_up i:hover {
+	opacity:inherit;
+	border: 1px solid #000;
+	-webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 @media screen and (max-width:768px) {
 	.menu .right-menu {
 		margin:0 5px;
