@@ -299,6 +299,62 @@ figure.project.hover a {
 .project_label:last-child {
 	margin-right: 0px;
 }
+
+.project_label.css {
+	border-bottom: 2px solid #264de4;
+}
+.project_label.scss {
+	border-bottom: 2px solid #CD6799;
+}
+.project_label.js {
+	border-bottom: 2px solid #f7e018;
+}
+.project_label.html {
+	border-bottom: 2px solid #e34c26;
+}
+.project_label.sql {
+	border-bottom: 2px solid #0277bd;
+}
+.project_label.php {
+	border-bottom: 2px solid #787CB5;
+}
+.project_label.cs {
+	border-bottom: 2px solid #690080;
+}
+
+.filters {
+	display: flex;
+	color:#f1f4d8;
+}
+
+.filters .projects_selector {
+	flex:1;
+	color:#f1f4d8;
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+	background-image: none;
+	border-radius: 5px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  flex: 1;
+  padding: 0 .8em;
+	cursor: pointer;
+	background: #2c3e50;
+}
 /* projects end */
 
 /* contacts start */

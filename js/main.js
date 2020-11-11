@@ -6,7 +6,7 @@ $(function() {
 
     $('#copyright').append(`Karibsky developer &copy; ${(new Date).getFullYear()}`);
 
-    (() => {
+    (async () => {
         var arrow = $('#arrow_up');  
         $(window).scroll(function() {     
             $(window).scrollTop() > 300 ? arrow.addClass('show') : arrow.removeClass('show');
@@ -15,66 +15,55 @@ $(function() {
            e.preventDefault();
            $('html, body').animate({scrollTop:0}, '300');
          });
+
+         var json = await getJsonFromUrl('https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json');
+         await displayProjectsFromJson(json);
     })();
 
-    (async () => {
-        $.ajax({
-            url: 'https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json',
-            dataType: 'json',
-            async: true,
-            success: function (data) {
-                fillProjectsFromResult(data);
-            },
-            error: function (e) {
-                throw new Error(e);
-            }
-        });
-    })();
+    async function getJsonFromUrl (url) {
+        try {
+            let result = await $.ajax({
+                url,
+                dataType: 'json',
+                async: true,
+            });
+            return result;
+        } 
+        catch (error) {
+            console.error(error);
+        }
+    };
 
-    function fillProjectsFromResult(data) {
+    $('.projects_selector select').on('change', async function() {
+        var json = await getJsonFromUrl('https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json');
+        await displayProjectsFromJson(json, this.value);
+      });
+
+    async function displayProjectsFromJson (data, elementsCount) {
         var data = data['feed']['entry'];
         var out = '';
+
         if (data.length > 0) {
-            data.forEach(function(item, i){
+            var elements = data.slice(0, elementsCount ?? data.length);
+
+            elements.forEach(async (item, i) => {
                 out += `<div class="col-md-4" data-aos="flip-${i % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${i * 100}">`;
                 out += `<figure class="col-md-4 project">`;
                 out += `<img src="${item['gsx$image']['$t']}" alt="${item['gsx$name']['$t']} project image"/>`;
                 out += `<figcaption>`;
-                item["gsx$labels"]["$t"].split(" ").forEach(function(item) {
-                    var labelColor = getLabelBackgroundByTechnologyName(item);
-                    out += `<span class="project_label" style="border-bottom: 1px solid ${labelColor};">${item}</span>`
+                item["gsx$labels"]["$t"].split(" ").forEach(async (item) => {
+                    out += `<span class="project_label ${item}">${item}</span>`
                 });
                 out += `<h2>${item['gsx$name']['$t']}</h2>`;
                 out += `<p>${item['gsx$description']['$t']}</p>`;
-                out += `<p class="project_labels">`
-               
-                out += `</p>`;
                 out += `<a href="${item['gsx$url']['$t']}">Перейти</a>`;
                 out += `</figcaption>`;
                 out += `</figure>`;
                 out += `</div>`;
             });
+
             $('.services .row').html(out);
+            $('.projects_counter p').html(`Всего проектов: ${data.length}`);
         }
     };
-
-    function getLabelBackgroundByTechnologyName(technologyName) {
-        switch(technologyName)
-        {
-            case 'scss':
-                return "#dba0c6";
-            case 'css':
-                return "#264de4";
-            case 'html':
-                return "#e34c26";
-            case 'js':
-                return "#f7e018";
-            case 'sql':
-                return "#0277bd";
-            case 'php':
-                return "#787CB5";
-            case 'c#':
-                return "#690080";
-        }
-    }
 });
