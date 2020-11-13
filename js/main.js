@@ -34,11 +34,6 @@ $(function() {
         }
     };
 
-    $('.projects_selector select').on('change', async function() {
-        var json = await getJsonFromUrl('https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json');
-        await displayProjectsFromJson(json, this.value);
-      });
-
     async function displayProjectsFromJson (data, elementsCount) {
         var data = data['feed']['entry'];
         var out = '';
