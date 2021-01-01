@@ -4,7 +4,7 @@ $(function() {
         disableMutationObserver: false
     });
 
-    $('#copyright').append(`Karibsky developer &copy; ${(new Date).getFullYear()}`);
+    $('#copyright').append(`Maxim Nikulin &copy; ${(new Date).getFullYear()}`);
 
     (async () => {
         var arrow = $('#arrow_up');  
