@@ -4,7 +4,7 @@ $(function() {
         disableMutationObserver: false
     });
 
-    $('#copyright').append(`Maxim Nikulin &copy; ${(new Date).getFullYear()}`);
+    $('.copyright').append(`Maxim Nikulin &copy; ${(new Date).getFullYear()}`);
 
     (async () => {
         var arrow = $('#arrow_up');  
@@ -42,12 +42,12 @@ $(function() {
             var elements = data.slice(0, elementsCount ?? data.length);
 
             elements.forEach(async (item, i) => {
-                out += `<div class="col-md-4" data-aos="flip-${i % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${i * 100}">`;
-                out += `<figure class="col-md-4 project">`;
+                out += `<div class="projects__item col-md-4" data-aos="flip-${i % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${i * 100}">`;
+                out += `<figure class="projects__item-figure col-md-4">`;
                 out += `<img src="${item['gsx$image']['$t']}" alt="${item['gsx$name']['$t']} project image"/>`;
                 out += `<figcaption>`;
                 item["gsx$labels"]["$t"].split(" ").forEach(async (item) => {
-                    out += `<span class="project_label ${item}">${item}</span>`
+                    out += `<span class="projects__item-label ${item}">${item}</span>`
                 });
                 out += `<h2>${item['gsx$name']['$t']}</h2>`;
                 out += `<p>${item['gsx$description']['$t']}</p>`;
@@ -57,8 +57,7 @@ $(function() {
                 out += `</div>`;
             });
 
-            $('.services .row').html(out);
-            $('.projects_counter p').html(`Всего проектов: ${data.length}`);
+            $('.projects__items .row').html(out);
         }
     };
 });
