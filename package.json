@@ -1,0 +1,23 @@
+{
+  "name": "karibsky.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": { 
+    "build": "babel js/es6 -d js/es5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibsky/karibsky.github.io.git"
+  },
+  "author": "karibsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karibsky/karibsky.github.io/issues"
+  },
+  "homepage": "https://github.com/Karibsky/karibsky.github.io#readme"
+}
