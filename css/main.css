@@ -480,12 +480,17 @@ figure.projects__item-figure:hover a {
 		width: 120px;
 		height: 120px;
 	}
+	
 	#projects .projects__items .projects__item figcaption h2 {
 		font-size: 1.2em;
 	}
 	#projects .projects__items .projects__item figcaption p {
 		font-size: 0.85em;
 		margin-bottom: 10px;
+	}
+
+	#projects .projects__items .projects__item {
+		padding:10px;
 	}
 }
 
@@ -494,7 +499,8 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) { 
 	#projects .projects__items .projects__item {
-		padding:25px;
+		padding:10px;
+		margin: 10px;
 	}
 	#projects .projects__items .projects__item figcaption h2 {
 		font-size: 2em;
@@ -509,7 +515,8 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : landscape) { 
 	#projects .projects__items .projects__item {
-		margin:25px;
+		padding: 10px;
+		margin: 10px;
 	}
 	#projects .projects__items .projects__item figcaption h2 {
 		font-size: 1.2em;
@@ -521,6 +528,13 @@ and (orientation : landscape) {
 		display: none;
 	}
 }
+
+@media (min-width: 321px) and (max-width: 768px) {
+	#projects .projects__items .projects__item {
+		padding: 10px;
+		margin: 10px;
+	}
+ }
 
 @media screen and (max-width:320px) {
 	.header-menu .header-menu__items {
