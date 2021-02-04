@@ -31,70 +31,61 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css" rel="stylesheet">
 </head>
 <body>
-	<section id="one">
-		<div class="menu">
-			<div class="logo">
+	<section id="header">
+		<div class="header-menu">
+			<div class="header-menu__logo">
 				<img src="img/logo.svg" alt="logo">
 			</div>
-			<div class="right-menu">
-				<a id="projects" onclick="$('html, body').animate({scrollTop:$('#three').position().top}, 2000)">Проекты</a>
-				<a id="contacts" onclick="$('html, body').animate({scrollTop:$('#four').position().top}, 5000);">Заказать</a>
+			<div class="header-menu__items">
+				<a class="header-menu__item" onclick="$('html, body').animate({scrollTop:$('#three').position().top}, 2000)">Проекты</a>
+				<a class="header-menu__item" onclick="$('html, body').animate({scrollTop:$('#four').position().top}, 5000);">Заказать</a>
 			</div>
 		</div>
-		<div class="card">
-			<div class="avatar"></div>
-			<div class="card-info">
+		<div class="header-card">
+			<div class="header-card__avatar"></div>
+			<div class="header-card__info">
 				<p>Maxim Nikulin</p>
-				<span>software@engineer:~$<span class="blinking-cursor">|</span></span>
+				<span>software@engineer:~$<span class="header-card__blinking-cursor">|</span></span>
 			</div>
 		</div>
-		<div class="arrow" onclick="$('html, body').animate({scrollTop:$('#two').position().top}, 2000)"></div>
+		<div class="header-card__arrow" onclick="$('html, body').animate({scrollTop:$('#technologies').position().top}, 2000)"></div>
 	</section>
-	<section id="two">
+	<section id="technologies">
 		<h1>Используемые технологии</h1>
-		<div class="skills container">
-			<div class="row">
-				<div class="col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
-					<img src="img/csharp.png" alt="csharp">
-				</div>
-				<div class="col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
-					<img src="img/sql.png" alt="sql">
-				</div>
-				<div class="col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
-					<img src="img/javascript.png" alt="javascript">
-				</div>
-				<div class="col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
-					<img src="img/sass.png" alt="sass">
-				</div>
-				<div class="col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
-					<img src="img/git.png" alt="git">
-				</div>
-				<div class="col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
-					<img src="img/photoshop.png" alt="photoshop">
-				</div>
+		<div class="technologies__items container">
+			<div class="technologies__item col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+				<img src="img/csharp.png" alt="csharp">
+			</div>
+			<div class="technologies__item col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+				<img src="img/sql.png" alt="sql">
+			</div>
+			<div class="technologies__item col-md-2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+				<img src="img/javascript.png" alt="javascript">
+			</div>
+			<div class="technologies__item col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+				<img src="img/sass.png" alt="sass">
+			</div>
+			<div class="technologies__item col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
+				<img src="img/git.png" alt="git">
+			</div>
+			<div class="technologies__item col-md-2" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
+				<img src="img/photoshop.png" alt="photoshop">
 			</div>
 		</div>
 	</section>
-	<section id="three">
+	<section id="projects">
 		<h1>Проекты</h1>
-		<div class="filters container">
-			<div class="projects_selector">
-			</div>
-			<div class="projects_counter">
-				<p></p>
-			</div>
-		</div>
-		<div class="services container">
+		<div class="projects__items container">
 			<div class="row">
 			</div>
 		</div>
 	</section>
-	<section id="four">
-		<i class="fa fa-vk fa-2x" aria-hidden="true" onclick="window.open('https://vk.com/id252263204')"></i>
-		<i class="fa fa-github-alt fa-2x" aria-hidden="true" onclick="window.open('https://github.com/Karibsky')"></i>
-		<i class="fa fa-envelope fa-2x" aria-hidden="true" onclick="window.open('mailto:defendmax@gmail.com')"></i>
+	<section id="contacts">
+		<i class="contacts__item fa fa-vk fa-2x" aria-hidden="true" onclick="window.open('https://vk.com/id252263204')"></i>
+		<i class="contacts__item fa fa-github-alt fa-2x" aria-hidden="true" onclick="window.open('https://github.com/Karibsky')"></i>
+		<i class="contacts__item fa fa-envelope fa-2x" aria-hidden="true" onclick="window.open('mailto:defendmax@gmail.com')"></i>
 		<br>
-		<p id="copyright"></p>
+		<p class="contacts__item copyright"></p>
 	</section>
 	<div id="arrow_up">
 		<i class="fa fa-chevron-up"></i>
