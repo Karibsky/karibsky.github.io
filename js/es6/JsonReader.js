@@ -1,14 +1,12 @@
 export default class JsonReader {
-	static async getJsonFromUrlAsync(url) {
+	static async getJsonFromUrl(url) {
 		try {
-			let result = await $.ajax({
+			return Promise.resolve($.ajax({
 				url,
 				dataType: 'json',
-				async: true,
-			});
-
-			return result;
-		}
+				async: true
+			}));
+		} 
 		catch (error) {
 			console.error(error);
 		}
