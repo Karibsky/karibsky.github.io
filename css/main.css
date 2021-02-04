@@ -529,10 +529,19 @@ and (orientation : landscape) {
 	}
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 800px) {
 	#projects .projects__items .projects__item {
 		padding: 10px;
 		margin: 10px;
+	}
+	.header-menu .header-menu__items {
+		margin:0 5px;
+	}	
+	.header-menu .header-menu__logo {
+		margin:0 5px;
+	}
+	.header-menu {
+		font-size:18px;
 	}
  }
 
