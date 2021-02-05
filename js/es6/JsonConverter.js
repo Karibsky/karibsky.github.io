@@ -3,12 +3,12 @@ export default class JsonConverter {
 		var html = '';
 
 		if (json.length > 0) {
-			json.forEach(async (item, i) => {
-				html += `<div class="projects__item col-md-4" data-aos="flip-${i % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${i * 50}">`;
+			json.map(async (item, index) => {
+				html += `<div class="projects__item col-md-4" data-aos="flip-${index % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${index * 50}">`;
 				html += `<figure class="projects__item-figure col-md-4">`;
-				html += `<img src="${item['gsx$image']['$t']}" alt="${item['gsx$name']['$t']} project image"/>`;
+				html += `<img src="${item['gsx$image']['$t']}" alt="project image"/>`;
 				html += `<figcaption>`;
-				item["gsx$labels"]["$t"].split(" ").forEach(async (item) => {
+				item["gsx$labels"]["$t"].split(" ").map(async item => {
 					html += `<span class="projects__item-label ${item}">${item}</span>`
 				});
 				html += `<h2>${item['gsx$name']['$t']}</h2>`;
@@ -17,7 +17,7 @@ export default class JsonConverter {
 				html += `</figcaption>`;
 				html += `</figure>`;
 				html += `</div>`;
-			});
+			})
 		}
 
 		return html;
