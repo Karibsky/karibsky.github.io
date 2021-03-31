@@ -1,4 +1,5 @@
 User-Agent: *
+Disallow: /scss/
 Disallow: /css/
 Disallow: /js/
 Disallow: /img/
