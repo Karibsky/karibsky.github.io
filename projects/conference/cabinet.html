@@ -40,7 +40,7 @@
 
 	<div class="content">
 		<center>
-			<table class="tftable1" border="1">
+			<table class="tasks_table" border="1">
 				<tr><th>Квест</th><th>Статус</th></tr>
 				<tr class="it"><td>«Память поколений»</td><td class="change">Не пройден</td></tr>
 				<tr class="it"><td>«Уральские сувениры»</td><td class="change">Не пройден</td></tr>
@@ -68,14 +68,6 @@
 			</table>
 			<button class="exit" onclick="window.location.replace('index.html');">Выйти</button>
 		</center>
-	<!-- STARIE 
-	<h1 class="one">Текущее задание <br>
-		<small class="text-muted">задание</small>
-	</h1>
-	<h1 class="two">Прогресс <br>
-		<small class="text-muted">прогресс</small>
-	</h1>
--->
 </div>
 <!-- CONTENT -->
 
@@ -83,7 +75,7 @@
 <div class="navbar-fixed-bottom row-fluid">
 	<div class="navbar-inner">
 		<div class="container">
-			<p>Karibsky developer &copy 2018 <br><a href="https://karibsky.github.io/" target="_blank">www.karibsky.github.io</a></p>
+			<p>Maxim Nikulin &copy 2018 <br><a href="https://karibsky.github.io/" target="_blank">www.karibsky.github.io</a></p>
 		</div>
 	</div>
 </div>
@@ -91,7 +83,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.tftable1 .it').click(function() {
+		$('.tasks_table .it').click(function() {
 			$('.change',this).text("Пройден");
 		});
 	});
