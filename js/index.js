@@ -16,48 +16,25 @@ document.addEventListener("DOMContentLoaded", async function () {
 		$('html, body').animate({ scrollTop: 0 }, '300');
 	});
 
-	await renderProjectsFromUrl('https://spreadsheets.google.com/feeds/list/1gLyy0BKWt8ZbGb_9_Zozk600OUJmkMwDxHOh_leoYVU/od6/public/values?alt=json');
-});
-
-async function renderProjectsFromUrl(url) {
-	let json = await getJsonFromUrl(url);
-	let html = await convertJsonToHtml(json['feed']['entry']);
-	$('.projects__items .row').html(html);
-}
-
-async function getJsonFromUrl(url) {
-	try {
-		return Promise.resolve($.ajax({
-			url,
-			dataType: 'json',
-			async: true
-		}));
-	} 
-	catch (error) {
-		console.error(error);
-	}
-}
-
-async function convertJsonToHtml(json) {
-	var html = '';
-
-	if (json.length > 0) {
-		json.map(async (item, index) => {
+	$.getJSON("projects.json", function(json) {
+		let html = '';
+		
+		json.projects.map((item, index) => {
 			html += `<div class="projects__item col-md-4" data-aos="flip-${index % 2 == 0 ? 'left' : 'right'}" data-aos-duration="2000" data-aos-delay="${index * 50}">`;
 			html += `<figure class="projects__item-figure col-md-4">`;
-			html += `<img src="${item['gsx$image']['$t']}" alt="project image"/>`;
+			html += `<img src="${item['image']}" alt="project image"/>`;
 			html += `<figcaption>`;
-			item["gsx$labels"]["$t"].split(" ").map(async item => {
+			item["labels"].split(" ").map(async item => {
 				html += `<span class="projects__item-label ${item}">${item}</span>`
 			});
-			html += `<h2>${item['gsx$name']['$t']}</h2>`;
-			html += `<p>${item['gsx$description']['$t']}</p>`;
-			html += `<a href="${item['gsx$url']['$t']}">Перейти</a>`;
+			html += `<h2>${item['name']}</h2>`;
+			html += `<p>${item['description']}</p>`;
+			html += `<a href="${item['url']}">Перейти</a>`;
 			html += `</figcaption>`;
 			html += `</figure>`;
 			html += `</div>`;
 		})
-	}
 
-	return html;
-}
+		$('.projects__items .row').html(html);
+	});
+});

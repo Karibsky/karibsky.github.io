@@ -1,0 +1,53 @@
+{
+	"projects": [
+		{
+			"name": "Панель администратора интернет-магазина",
+			"description": "Работа выполнена в стиле material design с использованием инфографики",
+			"image": "img/dashboard.png",
+			"url": "projects/dashboard/index.html",
+			"labels": "html scss js"
+		},
+		{
+			"name": "Сайт-лендинг для музыканта",
+			"description": "В проекте реализовано управление песнями и обложками к ним, а так же чтение биографии и просмотр фотографий исполнителя",
+			"image": "img/koryakov.png",
+			"url": "https://github.com/Karibsky/Songwriter-landing",
+			"labels": "html css js php sql"
+		},
+		{
+			"name": "Интернет-галерея",
+			"description": "На сайте представлены работы русских художников и живописцев, а так же их биографии",
+			"image": "img/art_brush.png",
+			"url": "projects/art-brush/index.html",
+			"labels": "html css js"
+		},
+		{
+			"name": "Фабрика бизнес процессов",
+			"description": "Интернет-магазин для компании которая занимается предоставлением услуг, а так же продажей продуктов 1С и Атол",
+			"image": "img/fbp.png",
+			"url": "https://github.com/Karibsky/Fbp",
+			"labels": "html css js php sql"
+		},
+		{
+			"name": "Каталог компьютерных комплектующих",
+			"description": "Онлайн каталог компьютерных комплектующих с возможностью фильтрации и поиска",
+			"image": "img/compstore.png",
+			"url": "https://github.com/Karibsky/Compstore",
+			"labels": "html css js php sql"
+		},
+		{
+			"name": "Загадки и квесты",
+			"description": "Проект позволяет посетить интересные места города Челябинска и выполнить предложенные мини-задания",
+			"image": "img/conference.png",
+			"url": "projects/conference/index.html",
+			"labels": "html css js"
+		},
+		{
+			"name": "Рекламный блок сайта грузоперевозок",
+			"description": "Первый опыт адаптивной верстки веб-страниц",
+			"image": "img/firstsite.png",
+			"url": "projects/firstsite/index.html",
+			"labels": "html css"
+		}
+	]
+}
